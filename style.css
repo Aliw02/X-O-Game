@@ -27,6 +27,12 @@ body {
     position: absolute;
 }
 
+@media (max-width: 767px) {
+    .container {
+        min-width: 320px;
+        height: 645px;
+    }
+}
 .container h1 {
     font-weight: normal;
     text-align: center;
@@ -53,14 +59,20 @@ body {
     font-size: 22px;
     color: white;
 }
-.container .inputs > .spans span {
-    display: block;
-}
+
+
 .container .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     position: relative;
     padding: 8px 0;
+}
+
+@media (max-width: 767px) {
+    .container .cards{
+        grid-template-columns:repeat(auto-fill, minmax(100px, 1fr));
+        place-items: center;
+    }
 }
 
 .container .cards div {
@@ -80,7 +92,13 @@ body {
     cursor: pointer;
     transition: 1s;
 }
-
+@media (max-width: 767px) {
+    .container .cards div{
+        width: 95px;
+        height: 160px;
+        font-size: 70px;
+    }
+}
 /* Start Shadow background */
 .shadow-background {
     height: 100%;
