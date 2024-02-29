@@ -1,0 +1,166 @@
+body {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+* {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Start Container */
+.container {
+    min-width: 600px;
+    background-color: lightblue;
+    padding: 0 20px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 1px 1px 20px 0 rgb(159, 159, 159);
+    position: absolute;
+}
+
+.container h1 {
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    width: fit-content;
+    position: relative;
+    margin: 10px auto;
+    padding-top: 10px;
+}
+.container h1 > span {
+    background-color: white;
+    width: 3px;
+    height: 89%;
+    display: inline-block;
+    position: absolute;
+    top: 64%;
+    left: 27px;
+    transform: translate(-50%, -50%);
+}
+.container .cards-field > .spans {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 22px;
+    color: white;
+}
+.container .inputs > .spans span {
+    display: block;
+}
+.container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    position: relative;
+    padding: 8px 0;
+}
+
+.container .cards div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 200px;
+    padding: 0 4px;
+    margin: 10px 0 10px;
+    color: rgb(39, 39, 39);
+    caret-color:  #0f67fd;
+    text-align: center;
+    background-color: white;
+    font-size: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* Start Shadow background */
+.shadow-background {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0000006e;
+    display: none;
+    transition: 1s;
+}
+.shadow-background .wininig {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    border-radius: 12px;
+    color: red;
+    padding: 20px 10px;
+    background-color: #fefefe;
+    box-shadow: 9px 7px 15px 0px #6c6c6c;
+}
+
+.wininig .win-card {
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.win-card h3 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #0f67fd;
+    font-size: 25px;
+}
+
+.win-card p {
+    text-align: left;
+    text-indent: 4px;
+    font-size: 18px;
+    color: #a700cc;
+}
+
+.wininig .exit {
+    background-color: #0000006e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right:5px;
+    transition: 0.3s;
+}
+
+.wininig .exit:hover {
+    background-color: red;
+    color: white;
+}
+
+.wininig .try-again {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    padding: 5px 10px;transition: 0.3s;
+    cursor: pointer;
+}
+
+.wininig .try-again:hover {
+    background-color: #0f67fd;
+}
+
+/* Start KeyFrames */
+@keyframes skipping {
+    from{
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(140deg);
+    }
+}
